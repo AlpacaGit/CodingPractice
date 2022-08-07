@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpaca.Tool.UI.AlertTool", "Alpaca.Tool.UI.AlertTool\Alpaca.Tool.UI.AlertTool.csproj", "{2531F766-C990-47C4-B55E-9E03ACC43EC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpaca.Common.Gadget", "..\Alpaca.Common.Gadget\Alpaca.Common.Gadget.csproj", "{D65FCF54-7306-44AD-9D5B-5276B20DA381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpaca.Repository.Model", "..\Alpaca.Repository.Model\Alpaca.Repository.Model.csproj", "{80EBE4D0-E62F-4E75-A118-DCF0F9ECDF7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpaca.Repository.Provider", "..\Alpaca.Repository.Provider\Alpaca.Repository.Provider.csproj", "{D46B3E79-92FF-4C2C-8AB1-F6EB8E727853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpaca.Tool.Logic.AlertTool", "..\Alpaca.Tool.Logic.AlertTool\Alpaca.Tool.Logic.AlertTool.csproj", "{F1A5E292-DA8A-4129-A18D-57F19080529B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2531F766-C990-47C4-B55E-9E03ACC43EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2531F766-C990-47C4-B55E-9E03ACC43EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2531F766-C990-47C4-B55E-9E03ACC43EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2531F766-C990-47C4-B55E-9E03ACC43EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65FCF54-7306-44AD-9D5B-5276B20DA381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65FCF54-7306-44AD-9D5B-5276B20DA381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65FCF54-7306-44AD-9D5B-5276B20DA381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65FCF54-7306-44AD-9D5B-5276B20DA381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EBE4D0-E62F-4E75-A118-DCF0F9ECDF7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EBE4D0-E62F-4E75-A118-DCF0F9ECDF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EBE4D0-E62F-4E75-A118-DCF0F9ECDF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EBE4D0-E62F-4E75-A118-DCF0F9ECDF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46B3E79-92FF-4C2C-8AB1-F6EB8E727853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46B3E79-92FF-4C2C-8AB1-F6EB8E727853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46B3E79-92FF-4C2C-8AB1-F6EB8E727853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46B3E79-92FF-4C2C-8AB1-F6EB8E727853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A5E292-DA8A-4129-A18D-57F19080529B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A5E292-DA8A-4129-A18D-57F19080529B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A5E292-DA8A-4129-A18D-57F19080529B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A5E292-DA8A-4129-A18D-57F19080529B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {206E427F-5CCD-4305-9D6D-38614B382CA7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/su-shingoro
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Alpaca.Tool.UI.AlertTool\\Alpaca.Tool.UI.AlertTool.csproj
+		SccProjectName1 = Alpaca.Tool.UI.AlertTool
+		SccLocalPath1 = Alpaca.Tool.UI.AlertTool
+		SccProjectUniqueName2 = ..\\Alpaca.Common.Gadget\\Alpaca.Common.Gadget.csproj
+		SccProjectName2 = ../Alpaca.Common.Gadget
+		SccLocalPath2 = ..\\Alpaca.Common.Gadget
+		SccProjectUniqueName3 = ..\\Alpaca.Repository.Model\\Alpaca.Repository.Model.csproj
+		SccProjectName3 = ../Alpaca.Repository.Model
+		SccLocalPath3 = ..\\Alpaca.Repository.Model
+		SccProjectUniqueName4 = ..\\Alpaca.Repository.Provider\\Alpaca.Repository.Provider.csproj
+		SccProjectName4 = ../Alpaca.Repository.Provider
+		SccLocalPath4 = ..\\Alpaca.Repository.Provider
+		SccProjectUniqueName5 = ..\\Alpaca.Tool.Logic.AlertTool\\Alpaca.Tool.Logic.AlertTool.csproj
+		SccProjectName5 = ../Alpaca.Tool.Logic.AlertTool
+		SccLocalPath5 = ..\\Alpaca.Tool.Logic.AlertTool
+	EndGlobalSection
+EndGlobal

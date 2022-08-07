@@ -1,0 +1,6 @@
+﻿<Normal>
+	<MessageItem>
+		<MessageCode>ConfirmStopSchedule</MessageCode>
+		<MessageBody>スケジュールを停止しますか？</MessageBody>
+	</MessageItem>
+</Normal>

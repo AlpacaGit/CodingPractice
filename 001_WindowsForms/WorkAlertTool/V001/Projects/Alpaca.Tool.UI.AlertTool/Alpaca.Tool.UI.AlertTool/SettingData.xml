@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SettingData>
+	<ConnectionParameter>
+		<Repository>
+			<DBDataSouroce>
+				
+			</DBDataSouroce>
+			<UserName>
+				
+			</UserName>
+			<PassWord>
+				
+			</PassWord>
+			<InitialCatalog>
+				
+			</InitialCatalog>
+		</Repository>
+		<Data>
+			<DBDataSouroce>
+
+			</DBDataSouroce>
+			<UserName>
+
+			</UserName>
+			<PassWord>
+
+			</PassWord>
+			<InitialCatalog>
+
+			</InitialCatalog>
+		</Data>
+	</ConnectionParameter>
+</SettingData>

@@ -15,7 +15,7 @@ namespace Alpaca.Notes.Web.Data
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public AlpacaNotesWebContext() : base("name=AlpacaNotesWebContext")
+        public AlpacaNotesWebContext() :  base("name=AlpacaNote")
         {
         }
 

@@ -14,7 +14,6 @@ namespace Alpaca.Notes.Web.Models
         [StringLength(50)]
         public string UserID { get; set; }
 
-        [Key]
         [Column(Order = 1)]
         [StringLength(50)]
         public string UserName { get; set; }

@@ -26,12 +26,12 @@ namespace Alpaca.Notes.Web.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index","NoteUsers");
             }
-            NoteUser noteUser = db.NoteUsers.Find(id);
+            NoteUser noteUser = db.NoteUsers.FirstOrDefault(x => x.UserID == id);
             if (noteUser == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Index", "NoteUsers");
             }
             return View(noteUser);
         }
@@ -39,7 +39,10 @@ namespace Alpaca.Notes.Web.Controllers
         // GET: NoteUsers/Create
         public ActionResult Create()
         {
-            return View();
+            Models.NoteUser noteUser = new NoteUser();
+            noteUser.RecDateTime = DateTime.Now;
+            noteUser.UpdateDateTime = DateTime.Now;
+            return View(noteUser);
         }
 
         // POST: NoteUsers/Create
@@ -51,6 +54,8 @@ namespace Alpaca.Notes.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                noteUser.RecDateTime = DateTime.Now;
+                noteUser.UpdateDateTime = DateTime.Now;
                 db.NoteUsers.Add(noteUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -64,12 +69,12 @@ namespace Alpaca.Notes.Web.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index", "NoteUsers");
             }
-            NoteUser noteUser = db.NoteUsers.Find(id);
+            NoteUser noteUser = db.NoteUsers.FirstOrDefault(x => x.UserID == id);
             if (noteUser == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Index", "NoteUsers");
             }
             return View(noteUser);
         }
@@ -97,7 +102,7 @@ namespace Alpaca.Notes.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NoteUser noteUser = db.NoteUsers.Find(id);
+            NoteUser noteUser = db.NoteUsers.FirstOrDefault(x => x.UserID == id);
             if (noteUser == null)
             {
                 return HttpNotFound();
@@ -110,7 +115,7 @@ namespace Alpaca.Notes.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            NoteUser noteUser = db.NoteUsers.Find(id);
+            NoteUser noteUser = db.NoteUsers.FirstOrDefault(x => x.UserID == id);
             db.NoteUsers.Remove(noteUser);
             db.SaveChanges();
             return RedirectToAction("Index");

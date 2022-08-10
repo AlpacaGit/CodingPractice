@@ -88,8 +88,17 @@ namespace Alpaca.Notes.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(noteUser).State = EntityState.Modified;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(noteUser).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                }
+                catch
+                {
+                    //とりあえずエラー時もIndexに遷移するように。
+                    return RedirectToAction("Index");
+                }
                 return RedirectToAction("Index");
             }
             return View(noteUser);

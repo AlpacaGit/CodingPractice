@@ -21,11 +21,9 @@ namespace Alpaca.Notes.Web.Models
         [StringLength(50)]
         public string UserRole { get; set; }
 
-        [Key]
         [Column(Order = 2)]
         public DateTime RecDateTime { get; set; }
 
-        [Key]
         [Column(Order = 3)]
         public DateTime UpdateDateTime { get; set; }
     }

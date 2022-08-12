@@ -90,6 +90,7 @@ namespace Alpaca.Notes.Web.Controllers
             {
                 try
                 {
+                    noteUser.UpdateDateTime = DateTime.Now;
                     db.Entry(noteUser).State = EntityState.Modified;
                     db.SaveChanges();
 

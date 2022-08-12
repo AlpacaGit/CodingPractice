@@ -1,23 +1,44 @@
-﻿@model Alpaca.Notes.Web.Models.NoteUser
+﻿@using Alpaca.Notes.Web.Common
+@model Alpaca.Notes.Web.Models.NoteUser
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = @PageName.NoteUsersDelete;
 }
 
-<h2>Delete</h2>
+<h2>@PageName.NoteUsersDelete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>@Messages.CAUTION_BEFORE_DELETE</h3>
 <div>
     <h4>NoteUser</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.UserRole)
+            @Html.DisplayNameFor(model => model.UserID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.UserRole)
+            @Html.DisplayFor(model => model.UserID)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRole)
+        </dt>
 
     </dl>
 

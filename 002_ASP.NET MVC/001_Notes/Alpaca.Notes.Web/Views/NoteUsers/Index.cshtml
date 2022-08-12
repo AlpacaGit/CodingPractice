@@ -1,13 +1,13 @@
-﻿@model IEnumerable<Alpaca.Notes.Web.Models.NoteUser>
+﻿
+@model IEnumerable<Alpaca.Notes.Web.Models.NoteUser>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Alpaca.Notes.Web.Common.PageName.NoteUsers;
 }
-
-<h2>ユーザ情報一覧</h2>
+<h2>@Alpaca.Notes.Web.Common.PageName.NoteUsers</h2>
 
 <p>
-    @Html.ActionLink("新規登録", "Create", null, new { @class= "btn  btn-default" })
+    <button onclick="window.location.href = '@Url.Action("Create","NoteUsers")'" class="btn btn-default">新規登録</button>
 </p>
 
 <table class="table">

@@ -129,7 +129,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\ConstInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NoteUsersController.cs" />
     <Compile Include="Data\AlpacaNotesWebContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -183,6 +185,7 @@
     <Content Include="Views\NoteUsers\Details.cshtml" />
     <Content Include="Views\NoteUsers\Edit.cshtml" />
     <Content Include="Views\NoteUsers\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

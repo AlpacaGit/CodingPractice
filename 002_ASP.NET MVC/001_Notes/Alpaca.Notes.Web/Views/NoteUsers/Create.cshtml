@@ -1,16 +1,17 @@
-﻿@model Alpaca.Notes.Web.Models.NoteUser
+﻿@using Alpaca.Notes.Web.Common
+@model Alpaca.Notes.Web.Models.NoteUser
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = PageName.NoteUsersRegist;
 }
 
-<h2>Create</h2>
+<h2>@PageName.NoteUsersRegist</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>NoteUser</h4>
         <hr />

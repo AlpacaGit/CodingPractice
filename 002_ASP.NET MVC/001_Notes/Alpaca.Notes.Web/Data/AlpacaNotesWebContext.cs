@@ -20,6 +20,7 @@ namespace Alpaca.Notes.Web.Data
         }
 
         public DbSet<Models.NoteUser> NoteUsers { get; set; }
-    
+        
+        public DbSet<Models.UserCertificationInfo> UserCertificationInfo { get; set; }
     }
 }

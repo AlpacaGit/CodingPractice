@@ -9,6 +9,15 @@ namespace Alpaca.Notes.Web.Common
 {
     public static class Util
     {
+
+        #region 定数
+
+        private static readonly char[] _randomStringCharaset =  { 'a', 'b', 'c', 'd', 'e', 'f', 'g' };
+
+
+        #endregion
+
+
         /// <summary>
         /// MD5によりハッシュ化した文字列を返す。
         /// </summary>
@@ -35,6 +44,23 @@ namespace Alpaca.Notes.Web.Common
                 result.Append(b.ToString("X2"));
             }
             return result.ToString();
+        }
+
+        /// <summary>
+        /// 指定桁数分のランダムな文字列を生成する。
+        /// </summary>
+        /// <param name="numberOfDigit">生成する文字列の桁数</param>
+        public static string GenerateRandomString(int numberOfDigit)
+        {
+            StringBuilder sb = new StringBuilder();
+            Random random = new Random();
+            for(int i = 0; i < numberOfDigit; i++)
+            {
+                char aChar = _randomStringCharaset[random.Next(_randomStringCharaset.Count())];
+                sb.Append(aChar);
+
+            }
+            return sb.ToString();
         }
     }
 }

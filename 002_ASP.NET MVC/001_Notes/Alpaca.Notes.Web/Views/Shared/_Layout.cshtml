@@ -28,11 +28,11 @@
                         @{
                             if (System.Web.HttpContext.Current.Session[Alpaca.Notes.Web.Common.SessionVariable.LOGIN_USERID] != null)
                             {
-                                @Html.ActionLink("ログアウト", "Index", Alpaca.Notes.Web.Common.ControllerName.LOGIN)
+                                @Html.ActionLink("ログアウト", "Logout", Alpaca.Notes.Web.Common.ControllerName.AUTH)
                             }
                             else
                             {
-                                @Html.ActionLink("ログイン", "Index", Alpaca.Notes.Web.Common.ControllerName.LOGIN)
+                                @Html.ActionLink("ログイン", "Login", Alpaca.Notes.Web.Common.ControllerName.AUTH)
                             }
                         }
 

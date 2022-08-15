@@ -17,8 +17,14 @@ namespace Alpaca.Notes.Web.Models
         [DisplayName("ユーザID")]
         public string UserID { get; set; }
 
+        /// <summary>
+        /// ソルト値
+        /// </summary>
         public string SoltValue { get; set; }
 
+        /// <summary>
+        /// ハッシュ値
+        /// </summary>
         public string HashValue { get; set; }
 
     }

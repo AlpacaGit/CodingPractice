@@ -40,6 +40,9 @@ namespace Alpaca.Notes.Web.Common
         /// </summary>
         public const string NoteUsersDelete = "ユーザ情報削除";
 
+
+        public const string Login = "ログイン";
+
     }
 
     /// <summary>
@@ -67,6 +70,11 @@ namespace Alpaca.Notes.Web.Common
         /// ユーザ情報削除
         /// </summary>
         NOTE_USERS_DELETE = 4,
+
+        /// <summary>
+        /// ログイン
+        /// </summary>
+        LOGIN = 5,
 
     }
 
@@ -105,9 +113,9 @@ namespace Alpaca.Notes.Web.Common
         public const string NOTE_USERS = "NoteUsers";
 
         /// <summary>
-        /// ログイン
+        /// 認証
         /// </summary>
-        public const string LOGIN = "Login";
+        public const string AUTH = "Auth";
     }
 
 }

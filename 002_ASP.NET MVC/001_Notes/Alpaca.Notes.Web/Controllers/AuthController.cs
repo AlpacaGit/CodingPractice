@@ -8,20 +8,22 @@ using Alpaca.Notes.Web.Common;
 
 namespace Alpaca.Notes.Web.Controllers
 {
-    public class LoginController : Controller
+    public class AuthController : Controller
     {
         /// <summary>
         /// DBコンテキストクラス
         /// </summary>
         Data.AlpacaNotesWebContext db = new Data.AlpacaNotesWebContext();
 
+        #region ログイン処理系
+
         // GET: Login
-        public ActionResult Index()
+        public ActionResult Login()
         {
             //未実装
             if(System.Web.HttpContext.Current.Session[SessionVariable.LOGIN_USERID] == null || System.Web.HttpContext.Current.Session[SessionVariable.LOGIN_USERID].ToString() == "")
             {
-                System.Web.HttpContext.Current.Session[SessionVariable.LOGIN_USERID] = "Alpaca";
+                return View();
             }
             else
             {
@@ -32,7 +34,7 @@ namespace Alpaca.Notes.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index([Bind(Include = "UserID")] Models.NoteUser noteUser, string passwd)
+        public ActionResult Login([Bind(Include = "UserID")] Models.NoteUser noteUser, string passwd)
         {
             //TODO：ログイン処理の実装予定。
             //パスワードソルトの仕組みを利用する。
@@ -41,7 +43,7 @@ namespace Alpaca.Notes.Web.Controllers
             if(loginUser == null)
             {
                 //ログインユーザが見つからない場合。ログイン画面に戻す。
-                //アトリビュート？の仕組みを使って「ユーザIDまたはパスワードが間違っています」と表示させる。
+                //アトリビュート？や、セッション変数を利用するなどして「ユーザIDまたはパスワードが間違っています」と表示させる。
                 return View(noteUser);
             }
 
@@ -70,5 +72,20 @@ namespace Alpaca.Notes.Web.Controllers
 
             return View(noteUser);
         }
+        #endregion
+
+        #region ログアウト処理系
+        /// <summary>
+        /// ログアウト
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Logout()
+        {
+            //セッション変数 ログインユーザIDを破棄し、ログアウトとする。
+            System.Web.HttpContext.Current.Session.Remove(SessionVariable.LOGIN_USERID);
+            return View();
+        }
+
+        #endregion
     }
 }

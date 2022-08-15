@@ -50,13 +50,22 @@ namespace Alpaca.Notes.Web.Controllers
         // 詳細については、https://go.microsoft.com/fwlink/?LinkId=317598 をご覧ください。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,UserName,RecDateTime,UpdateDateTime,UserRole")] NoteUser noteUser)
+        public ActionResult Create([Bind(Include = "UserID,UserName,RecDateTime,UpdateDateTime,UserRole")] NoteUser noteUser, string passwd, string retypePasswd)
         {
             if (ModelState.IsValid)
             {
                 noteUser.RecDateTime = DateTime.Now;
                 noteUser.UpdateDateTime = DateTime.Now;
                 db.NoteUsers.Add(noteUser);
+
+                Models.UserCertificationInfo aCertInfo = new UserCertificationInfo();
+                aCertInfo.UserID = noteUser.UserID;
+                aCertInfo.SoltValue = Common.Util.GenerateRandomString(5);
+                aCertInfo.HashValue =  Common.Util.GetMD5HashString("password" + aCertInfo.SoltValue);
+
+                db.UserCertificationInfo.Add(aCertInfo);
+
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

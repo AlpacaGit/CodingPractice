@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[NoteUser] (
+--レポジトリテーブルの作成SQL集。
+CREATE TABLE [dbo].[NoteUser] (
     [UserID]         NVARCHAR (50) NOT NULL,
     [UserName]       NVARCHAR (50) NOT NULL,
     [UserRole]       NVARCHAR (50) NULL,

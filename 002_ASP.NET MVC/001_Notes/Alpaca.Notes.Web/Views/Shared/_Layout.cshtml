@@ -25,19 +25,20 @@
                     <li>@Html.ActionLink("情報検索", "Index", "NoteUsers")</li>
                     <li>@Html.ActionLink("ユーザ編集", "Index", "NoteUsers")</li>
                     <li>
-                        @{
-                            if (System.Web.HttpContext.Current.Session[Alpaca.Notes.Web.Common.SessionVariable.LOGIN_USERID] != null)
-                            {
-                                @Html.ActionLink("ログアウト", "Logout", Alpaca.Notes.Web.Common.ControllerName.AUTH)
-                            }
-                            else
-                            {
-                                @Html.ActionLink("ログイン", "Login", Alpaca.Notes.Web.Common.ControllerName.AUTH)
-                            }
-                        }
+
 
                     </li>
                 </ul>
+                @{
+                    if (System.Web.HttpContext.Current.Session[Alpaca.Notes.Web.Common.SessionVariable.LOGIN_USERID] != null)
+                    {
+                        <button onclick="location.href='@Url.Action("Logout",Alpaca.Notes.Web.Common.ControllerName.AUTH)'" class="btn btn-info navbar-btn navbar-right">ログアウト</button>
+                    }
+                    else
+                    {
+                        <button onclick="location.href='@Url.Action("Login",Alpaca.Notes.Web.Common.ControllerName.AUTH)'" class="btn btn-info navbar-btn navbar-right">ログイン</button>
+                    }
+                }
             </div>
         </div>
     </div>

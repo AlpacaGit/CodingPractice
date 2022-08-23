@@ -83,7 +83,7 @@ namespace Alpaca.Notes.Web.Controllers
         {
             //セッション変数 ログインユーザIDを破棄し、ログアウトとする。
             System.Web.HttpContext.Current.Session.Remove(SessionVariable.LOGIN_USERID);
-            return View();
+            return RedirectToAction("Login","Auth");
         }
 
         #endregion
